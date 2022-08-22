@@ -1,15 +1,16 @@
 import logo from "../../logo.svg";
+import './styles.css';
 
 const NavBar = () => {
     return (
-        <div>
-            <div>
+        <div className="navBar-container">
+            <div className="navBar-logo">
                 <img width={'100px'} src={logo} alt="logo"></img>
             </div>
-            <div>
+            <div className="navBar-brand">
                 <h1>RPGStore</h1>
             </div>
-            <div>
+            <div className="navBar-list">
                 <ul>
                     <li>
                         <a href="#">Home</a>
@@ -22,7 +23,7 @@ const NavBar = () => {
                     </li>
                 </ul>
             </div>
-            <div>
+            <div className="navBar-login">
                 <button>login</button>
             </div>
         </div>
