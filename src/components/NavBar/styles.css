@@ -13,3 +13,30 @@
     justify-content: space-between;
     list-style-type: none;
 }
+
+.navBar-login button{
+    
+    height: 30px;
+    width: 50px;
+}
+
+button{
+    transition: transform 0.5s;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.cartButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80px;
+}
+
+.cartButton div{
+    font-size: 2rem;
+}
+
+button:hover{
+    transform: translate(0,-3px);
+}

@@ -1,5 +1,6 @@
 import logo from "../../logo.svg";
 import './styles.css';
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return (
@@ -22,6 +23,9 @@ const NavBar = () => {
                         <a href="#">About</a>
                     </li>
                 </ul>
+            </div>
+            <div>
+                <CartWidget />
             </div>
             <div className="navBar-login">
                 <button>login</button>

@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
+import ItemListConteiner from './components/ItemListContainer';
 
 function App() {
   return (
@@ -8,6 +8,9 @@ function App() {
       <header>
           <NavBar/>
       </header>
+      <main>
+          <ItemListConteiner prop="Hola mundo"/>
+      </main>
     </div>
   );
 }
