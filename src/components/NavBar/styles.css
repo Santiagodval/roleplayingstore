@@ -40,3 +40,41 @@ button{
 button:hover{
     transform: translate(0,-3px);
 }
+
+.contador{
+
+width: 900px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 50px);
+
+    grid-template-areas: "h4 h4 h4"
+                        "subtract counter add"
+                        "addbutton addbutton addbutton";
+
+}
+
+.contador * {
+    margin: 5px;
+}
+
+.contador #subtract{
+    grid-area: subtract;
+}
+.contador #add{
+    grid-area: add;
+}
+
+.contador .counter{
+    grid-area: counter;
+}
+
+.contador h4{
+    grid-area: h4;
+}
+
+.contador .addButton{
+    grid-area: addbutton;
+}
