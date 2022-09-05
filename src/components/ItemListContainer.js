@@ -1,6 +1,6 @@
 import ItemCount from "./ItemCount";
 
-const ItemListConteiner = ({prop})=>{
+const ItemListContainer = ({prop})=>{
     return(
         <div>
             {prop}
@@ -9,4 +9,4 @@ const ItemListConteiner = ({prop})=>{
     )
 }
 
-export default ItemListConteiner;
+export default ItemListContainer;
