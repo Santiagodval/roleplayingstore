@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer';
 import ItemList from './components/ItemList';
 import data from './components/mock-data';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 
@@ -14,6 +15,7 @@ function App() {
       </header>
       <main>
           <ItemListContainer prop="Hola mundo"/>
+          <ItemDetailContainer/>
       </main>
     </div>
   );

@@ -1,9 +1,8 @@
-import ItemCount from "./ItemCount";
 import { useState, useEffect } from "react";
-import data from './mock-data';
-import ItemList from "./ItemList";
+import data from '../mock-data';
+import ItemDetail from "./ItemDetail";
 
-const ItemListContainer = ({prop})=>{
+const ItemDetailContainer = ({prop})=>{
     const [items, setItems] = useState(data);
 
     const getData = new Promise((resolve, reject) => {
@@ -20,11 +19,9 @@ const ItemListContainer = ({prop})=>{
     }, [])
     return(
         <div>
-            {/* {prop} */}
-            {/* <ItemCount stock="10" initial={1}/> */}
-            <ItemList items={items}/>
+            <ItemDetail items={items}/>
         </div>
     )
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;

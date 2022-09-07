@@ -78,3 +78,55 @@ width: 900px;
 .contador .addButton{
     grid-area: addbutton;
 }
+
+/* item list */
+.ItemList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: center;
+}
+
+.ItemList .item{
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 255, 255, 0.477);
+}
+
+/* Item detail */
+
+.ItemDetail{
+    display: grid;
+    grid-template-columns: 300px;
+}
+
+.ItemDetail .item{
+    display: grid;
+    grid-template-areas: "titulo titulo"
+                        "imagen precio"
+                        "imagen detalle"
+                        "stock stock";
+
+    justify-items: center;
+
+    background-color:rgba(255, 127, 80, 0.676);
+}
+
+.ItemDetail .item h3{
+    grid-area: titulo;
+}
+
+.ItemDetail .item img{
+    grid-area: imagen;
+}
+
+.ItemDetail .item .precio{
+    grid-area: precio;
+}
+
+.ItemDetail .item button{
+    grid-area: detalle;
+}
+
+.ItemDetail .item .stock{
+    grid-area: stock;
+}
