@@ -4,7 +4,7 @@ import data from './mock-data';
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({prop})=>{
-    const [items, setItems] = useState(data);
+    const [items, setItems] = useState([]);
 
     const getData = new Promise((resolve, reject) => {
         setTimeout(() => {

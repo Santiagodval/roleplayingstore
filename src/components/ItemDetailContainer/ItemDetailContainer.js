@@ -3,7 +3,7 @@ import data from '../mock-data';
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = ({prop})=>{
-    const [items, setItems] = useState(data);
+    const [items, setItems] = useState([]);
 
     const getData = new Promise((resolve, reject) => {
         setTimeout(() => {
