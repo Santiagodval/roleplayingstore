@@ -1,27 +1,41 @@
 import { useState, useEffect } from "react";
 import data from '../mock-data';
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = ({prop})=>{
-    const [items, setItems] = useState([]);
+
+const ItemDetailContainer = ({ prop }) => {
+    const {productId} = useParams();
+
+    const [item, setItem] = useState();
+    const [isLoading, setIsLoading] = useState(true);
 
     const getData = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data); 
+            resolve(data);
         }, 2000);
-    })
+    });
 
     useEffect(() => {
-        getData.then((result)=>{
-            setItems(result);
-            console.log(result);
-        })
+        setIsLoading(true);
+        const sarasa = async() => {
+            await getData.then((result) => {
+                console.log(result.find(itemsd=>itemsd.id === parseInt(productId)))
+                setItem(result.find(itemsd=>itemsd.id === parseInt(productId)));
+            })
+            setIsLoading(false);
+        }
+        sarasa();
+        
     }, [])
-    return(
+
+    
+    return (
         <div>
-            <ItemDetail items={items}/>
+            {isLoading ? <p>loading</p> : <ItemDetail item={item}/>}
         </div>
     )
 }
+
 
 export default ItemDetailContainer;

@@ -1,6 +1,7 @@
 import logo from "../../logo.svg";
 import './styles.css';
 import CartWidget from "./CartWidget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -13,15 +14,10 @@ const NavBar = () => {
             </div>
             <div className="navBar-list">
                 <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
+                    <NavLink className={({isActive})=>isActive ? "active" : "inactive"} to="/">Home</NavLink>
+                    <NavLink className={({isActive})=>isActive ? "active" : "inactive"} to="/products/dices">Dados</NavLink>
+                    <NavLink className={({isActive})=>isActive ? "active" : "inactive"} to="/products/minis">Minis</NavLink>
+                    <NavLink className={({isActive})=>isActive ? "active" : "inactive"} to="/products/manuals">Manuales</NavLink>
                 </ul>
             </div>
             <div>
